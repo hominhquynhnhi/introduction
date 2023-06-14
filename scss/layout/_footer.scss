@@ -1,0 +1,100 @@
+.footer {
+    background-color: $footer-color;
+    &__top {
+        padding: 7rem 0;
+        @include flexbox(flex-start, space-between);
+        margin-left: -5rem;
+        flex-wrap: wrap;
+    }
+    &__header {
+        min-height: 10rem;
+        margin-bottom: 3.5rem;
+      }
+      &__logo {
+        max-height: 10rem;
+      }
+      &__item {
+        width: 25%;
+        padding-left: 5rem;
+        @include flexbox(flex-start, flex-start, flex, column);
+        &:nth-child(2) {
+          width: 20%;
+        }
+        &:last-child {
+          width: 30%;
+        }
+      }
+      &__link {
+        text-decoration: underline;
+      }
+      &__title {
+        font-size: 3rem;
+      }
+      &__content {
+        margin-top: auto;
+      }
+      &__text {
+        margin-bottom: 2rem;
+      }
+      &__subscribe {
+        width: 100%;
+        @include flexbox(center, space-between);
+        position: relative;
+      }
+      &__input {
+        border: 1px solid $gray-color;
+        border-radius: 6px;
+        padding: 1.5rem 4rem 1.5rem 1.5rem;
+        background-color: white;
+        outline: none;
+        flex: 1;
+        width: 100%;
+        transition: 0.25s ease;
+        color: $primary-color;
+        &::-webkit-input-placeholder {
+          color: $gray-color;
+        }
+        &:focus {
+          border-color: $primary-color;
+        }
+      }
+      &__button {
+        outline: none;
+        border: 0;
+        background-color: transparent;
+        padding: 0;
+        margin: 0;
+        color: $primary-color;
+        font-size: 2rem;
+        flex-shrink: 0;
+        position: absolute;
+        top: 50%;
+        right: 1.5rem;
+        transform: translateY(-50%);
+      }
+      &-bottom {
+        padding: 2.5rem 0;
+        border-top: 1px solid #ccc;
+        &__container {
+          @include flexbox(center, space-between);
+        }
+      }
+      &-social {
+        @include flexbox(center);
+        &__item {
+          margin-left: 2rem;
+        }
+        &__link {
+          @include flexbox(center, center, inline-flex);
+          @include size(4rem);
+          border-radius: 4rem;
+          border: 1px solid $primary-color;
+          color: $primary-color;
+          transition: 0.2s ease;
+          &:hover {
+            color: white;
+            background-color: $primary-color;
+          }
+        }
+      }
+}

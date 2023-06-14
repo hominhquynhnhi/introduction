@@ -1,0 +1,64 @@
+.customer{
+    padding: 13.5rem 0;
+    &__container {
+      max-width: 1375px;
+    }
+    &__slider {
+      margin-top: 9rem;
+    }
+    &__item {
+        text-align: center;
+        position: relative;
+        &:before {
+          content: "\f10d";
+          font-size: 10rem;
+          font-family: "Font Awesome 5 Free";
+          @include absoluteCenter();
+          font-weight: bold;
+          color: $gray-light-color;
+          opacity: 0.25;
+          pointer-events: none;
+        }
+      }
+      &__avatar {
+        @include size(18rem);
+        object-fit: cover;
+        margin: 0 auto 2.5rem;
+        border-radius: 50%;
+      }
+      &__name {
+        font-size: 2.5rem;
+        font-weight: 600;
+      }
+      &__position {
+        color: $gray-light-color;
+        margin-bottom: 2.5rem;
+        display: inline-block;
+      }
+      &__rating {
+        color: $rating-color;
+        font-size: 2rem;
+        margin-bottom: 4rem;
+      }
+      &__content {
+        font-size: 2rem;
+        font-style: italic;
+        line-height: 2;
+      }
+
+      @include maxWidth(1600px) {
+        padding: 7rem 0;
+        &__slider {
+          margin-top: 4rem;
+        }
+        &__avatar {
+          @include size(14rem);
+        }
+        &__rating {
+          margin-bottom: 2rem;
+        }
+        &__content {
+          font-size: 1.8rem;
+        }
+      }
+}

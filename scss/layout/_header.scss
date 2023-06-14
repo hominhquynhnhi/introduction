@@ -1,0 +1,143 @@
+.header {
+    background: url("../images/header-bg.jpg") no-repeat right top/ cover;
+    max-height: 99rem;
+    &__top{
+        @include flexbox(center, space-between);
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        padding-top: 2rem;
+    }
+    &-logo {
+        display: inline-block;
+        &__image{
+            max-height: 5rem;
+        }
+
+    }
+    &-menu {
+        @include flexbox(center);
+        &__item {
+            margin-left: 5.5rem;
+        }
+        &__link {
+            color: $secondary-color ;
+            text-transform: capitalize;
+            font-weight: 600;
+        }
+    }
+    &-cart {
+        position: relative;
+        &__count {
+            @include size(2rem);
+            position: absolute;
+            border-radius: 2rem;
+            color: $primary-color;
+            background-color: white;
+            @include flexbox(center, center);
+            right: -100%;
+            top: -70%;
+        }
+    }
+    &__content {
+        margin-top: 18rem;
+        max-width: 70rem;
+    }
+    &__heading {
+        font-family: $secondary-font;
+        font-weight: bold;
+        font-size: 8rem;
+        text-transform: capitalize;
+        line-height: 1.2;
+        margin-bottom: 4rem;
+        span{
+            display: block;
+        }
+    }  
+    &-search {
+        width: 100%;
+        border-radius: 1rem;
+        @include flexbox(stretch);
+        background-color: white;
+        margin-bottom: 5rem;
+        &__left {
+            @include flexbox(center);
+            padding: 2rem;
+            border: 1px solid $gray-color;
+            border-right: 0;
+            border-radius: 1rem 0 0 1rem;
+            flex-grow: 1;
+            width: 100%;
+            color: $gray-light-color;
+        }
+        &__input {
+            border: 0;
+            padding-left: 1rem;
+            color: $primary-color;
+            &::-webkit-input-placeholder{
+                color: $gray-light-color;
+            }
+        }
+        &__button {
+            flex-shrink: 0;
+            color: white;
+            background-color: $primary-color;
+            border: 0;
+            border-radius: 0 1rem 1rem 0;
+            padding: 0 3.5rem;
+            font-weight: 400;
+            i{
+                padding-left: 0.5rem;
+            }
+        }
+    }
+    &-social {
+        @include flexbox(center);
+        &__item {
+          margin-right: 8.5rem;
+          font-size: 1.8rem;
+        }
+        &__icon {
+          color: $primary-color;
+          margin-right: 5px;
+        }
+      }
+
+}
+
+@include maxWidth(1023px) {
+  .header {
+    height: auto;
+    padding-bottom: 5rem;
+    &__content {
+      margin-top: 5rem;
+    }
+    &__heading {
+      font-size: 3rem;
+      margin-bottom: 2rem;
+    }
+    &-menu {
+      display: none;
+    }
+    &-search {
+      margin-bottom: 2rem;
+      &__left {
+        padding: 1rem;
+      }
+      &__button {
+        padding: 0 1rem;
+      }
+      &__input {
+        padding-left: 1rem;
+      }
+    }
+    &-social {
+      &__item {
+        margin-right: 2rem;
+        font-size: 1.4rem;
+      }
+    }
+  }
+}
+
+  

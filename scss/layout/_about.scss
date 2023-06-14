@@ -1,0 +1,40 @@
+.about {
+    padding: 12rem 0 20rem;
+    background:  url("https://images.unsplash.com/photo-1492827016231-736013acccc0?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=2850&q=80")
+    no-repeat center / cover;
+    &__content {
+        padding-left: 38%;
+        padding-right: 10%;
+    }
+    &__desc {
+        line-height: 1.8;
+        margin-bottom: 3rem;
+      }
+    &-discover {
+        @include flexbox(stretch, flex-start, inline-flex);
+    border-radius: 1rem;
+    background-color: $primary-color;
+    color: white;
+    &__text {
+        display: block;
+        padding: 2rem;
+      }
+      &__icon {
+        padding: 2rem;
+        @include flexbox(center, center);
+        background-color: rgba(white, 0.4);
+      }
+    }
+    @include maxWidth(1023px) {
+        padding: 5rem 0;
+        &__content {
+          padding-left: 0;
+          padding-right: 0;
+        }
+      }
+      @include maxWidth(767px) {
+        padding-bottom: 15rem;
+        background-size: contain;
+        background-position: bottom;
+      }
+}
